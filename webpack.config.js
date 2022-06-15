@@ -24,7 +24,7 @@ const nodeEnv = process.env.NODE_ENV || "development"
 module.exports = {
     entry: resolvePath('./src/index.js'),
     output: {
-        path: resolvePath('./dist'),
+        path: resolvePath('./docs'),
         filename: '[name].bundle.js'
     },
     // devtool: devtool,
@@ -68,7 +68,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'react app',
+            title: 'Algorithm Learning',
             template: './src/index.html',
             filename: 'index.html',
             inject: true,
