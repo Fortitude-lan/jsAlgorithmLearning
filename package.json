@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Fortitude-lan/jsAlgorithmLearning/issues"
   },
-  "homepage": "https://github.com/Fortitude-lan/jsAlgorithmLearning#readme",
+  "homepage": "./",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
@@ -42,8 +42,8 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "antd": "^4.21.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  },
-  "homepage":"./"
+  }
 }
