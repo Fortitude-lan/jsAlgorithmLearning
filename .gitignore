@@ -1,0 +1,4 @@
+# 下面自己配置使用的 忽略文件
+node_modules/
+package-lock.json
+dist/
