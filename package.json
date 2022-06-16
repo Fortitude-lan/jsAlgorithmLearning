@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=development&&webpack-dev-server ",
     "build": "set NODE_ENV=production&&webpack --config webpack.config.js",
-    "dev": "webpack --config webpack.config.js"
+    "dev": "set NODE_ENV=development&&webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,7 @@
   "dependencies": {
     "antd": "^4.21.2",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-markdown": "^8.0.3"
   }
 }

@@ -3,7 +3,7 @@
  * @Author: wanghexing
  * @Date: 2022-06-15 16:02:38
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-15 17:11:26
+ * @LastEditTime: 2022-06-16 11:39:06
  */
 import {
     MenuFoldOutlined,
@@ -78,7 +78,7 @@ export default function index() {
                         minHeight: 280,
                     }}
                 >
-                    Content
+                    
                 </Content>
             </Layout>
         </Layout>

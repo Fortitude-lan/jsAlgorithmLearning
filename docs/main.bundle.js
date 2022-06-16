@@ -16054,32 +16054,64 @@ menu_Menu.Item = MenuItem_MenuItem;
 menu_Menu.SubMenu = menu_SubMenu;
 menu_Menu.ItemGroup = MenuItemGroup;
 /* harmony default export */ const menu = (menu_Menu);
-;// CONCATENATED MODULE: ./src/plugins/router/index.js
-function router_slicedToArray(arr, i) { return router_arrayWithHoles(arr) || router_iterableToArrayLimit(arr, i) || router_unsupportedIterableToArray(arr, i) || router_nonIterableRest(); }
+;// CONCATENATED MODULE: ./src/plugins/header/index.js
+/*
+ * @Description: 
+ * @Author: wanghexing
+ * @Date: 2022-06-15 15:49:20
+ * @LastEditors: wanghexing
+ * @LastEditTime: 2022-06-16 12:41:24
+ */
 
-function router_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function header_Header() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "header"
+  }, /*#__PURE__*/react.createElement("div", {
+    className: "logo"
+  }, "Algorithm"));
+}
+;// CONCATENATED MODULE: ./src/plugins/footer/index.js
+/*
+ * @Description: 
+ * @Author: wanghexing
+ * @Date: 2022-06-15 15:49:20
+ * @LastEditors: wanghexing
+ * @LastEditTime: 2022-06-16 12:48:27
+ */
 
-function router_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return router_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return router_arrayLikeToArray(o, minLen); }
+function footer_Header() {
+  return /*#__PURE__*/react.createElement("div", {
+    className: "footer"
+  }, "design by Antares");
+}
+;// CONCATENATED MODULE: ./src/components/appEntry.js
+function appEntry_slicedToArray(arr, i) { return appEntry_arrayWithHoles(arr) || appEntry_iterableToArrayLimit(arr, i) || appEntry_unsupportedIterableToArray(arr, i) || appEntry_nonIterableRest(); }
 
-function router_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function appEntry_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function router_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function appEntry_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return appEntry_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return appEntry_arrayLikeToArray(o, minLen); }
 
-function router_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function appEntry_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function appEntry_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function appEntry_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /*
  * @Description: 
  * @Author: wanghexing
  * @Date: 2022-06-15 16:02:38
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-15 17:11:26
+ * @LastEditTime: 2022-06-16 12:42:51
  */
 
 
 
-var router_Header = es_layout.Header,
-    router_Sider = es_layout.Sider,
-    router_Content = es_layout.Content;
+
+
+var appEntry_Header = es_layout.Header,
+    appEntry_Sider = es_layout.Sider,
+    appEntry_Content = es_layout.Content;
 var menuList = [{
   key: '1',
   // icon: <UserOutlined />,
@@ -16102,40 +16134,38 @@ var menuList = [{
   icon: /*#__PURE__*/react.createElement(icons_UploadOutlined, null),
   label: 'nav 3'
 }];
-function router_index() {
+function appEntry_index() {
   var _useState = (0,react.useState)(false),
-      _useState2 = router_slicedToArray(_useState, 2),
+      _useState2 = appEntry_slicedToArray(_useState, 2),
       collapsed = _useState2[0],
       setCollapsed = _useState2[1];
 
-  return /*#__PURE__*/react.createElement(es_layout, null, /*#__PURE__*/react.createElement(router_Sider, {
+  return /*#__PURE__*/react.createElement("div", null, /*#__PURE__*/react.createElement(header_Header, null), /*#__PURE__*/react.createElement(es_layout, null, /*#__PURE__*/react.createElement(appEntry_Sider, {
     trigger: null,
     collapsible: true,
     collapsed: collapsed
-  }, /*#__PURE__*/react.createElement("div", {
-    className: "logo"
-  }, "Algorithm"), /*#__PURE__*/react.createElement(menu, {
+  }, /*#__PURE__*/react.createElement(menu, {
     theme: "dark",
     mode: "inline",
     defaultSelectedKeys: ['1'],
     items: menuList
   })), /*#__PURE__*/react.createElement(es_layout, {
     className: "site-layout"
-  }, /*#__PURE__*/react.createElement(router_Header, {
+  }, /*#__PURE__*/react.createElement(appEntry_Header, {
     className: "site-layout-background"
   }, /*#__PURE__*/react.createElement(collapsed ? icons_MenuUnfoldOutlined : icons_MenuFoldOutlined, {
     className: 'trigger',
     onClick: function onClick() {
       return setCollapsed(!collapsed);
     }
-  })), /*#__PURE__*/react.createElement(router_Content, {
+  })), /*#__PURE__*/react.createElement(appEntry_Content, {
     className: "site-layout-background",
     style: {
       margin: '24px 16px',
       padding: 24,
       minHeight: 280
     }
-  }, "Content")));
+  }))), /*#__PURE__*/react.createElement(footer_Header, null));
 }
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(745);
@@ -16147,7 +16177,7 @@ var client = __webpack_require__(745);
 
 var container = document.getElementById('root');
 var root = (0,client/* createRoot */.s)(container);
-root.render( /*#__PURE__*/react.createElement(router_index, null));
+root.render( /*#__PURE__*/react.createElement(appEntry_index, null));
 })();
 
 /******/ })()
