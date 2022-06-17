@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: wanghexing
+ * @Date: 2022-06-14 10:17:34
+ * @LastEditors: wanghexing
+ * @LastEditTime: 2022-06-17 10:48:21
+ */
 const path = require('path');
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')// 在生成文件之前清空所有Plugin
@@ -63,7 +70,7 @@ module.exports = {
             src: path.join(__dirname, "/src"),
             utils: path.join(__dirname, "/src/utils"),
             config: path.join(__dirname, "/src/app/config"),
-            components: path.join(__dirname, "/src/app/components"),
+            components: path.join(__dirname, "/src/components"),
         }
     },
     plugins: [

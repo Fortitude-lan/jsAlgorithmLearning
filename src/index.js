@@ -1,8 +1,8 @@
 import React from 'react';
 import "../assets/css/global.less"
 import 'antd/dist/antd.css';
-import Entry from './components/appEntry'
+import AppEntry from './components/appEntry'
 import { createRoot } from 'react-dom/client';
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<Entry />)
+root.render(<AppEntry />)

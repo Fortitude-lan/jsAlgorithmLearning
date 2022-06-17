@@ -3,86 +3,60 @@
  * @Author: wanghexing
  * @Date: 2022-06-15 16:02:38
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-16 11:39:06
+ * @LastEditTime: 2022-06-17 17:40:20
  */
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
-} from '@ant-design/icons';
-import { Layout, Menu } from 'antd';
-import React, { useState } from 'react';
-const { Header, Sider, Content } = Layout;
+import React from 'react'
+import Queue from 'src/app/queue/a'
+import Home from 'src/app/home/home'
+import Dynamic from 'src/app/dynamic'
+import Greedy from 'src/app/greedy'
+// import asyncComponent from "utils/asyncComponent";
+// const Home = asyncComponent({
+//     loader: () => import("../../app/home")
+// });
 
-const menuList=[
+const menuList = [
     {
-        key: '1',
-        // icon: <UserOutlined />,
+        label: 'Home',
+        path: '/home',
+        key: '/home',
+        element: <Home/>,
+        icon: ''
+    },
+    {
         label: '队列',
-        children:[
+        path: '/queue',
+        key: '/queue',
+        icon: '',
+        children: [
             {
-                key: '2',
-                // icon: <VideoCameraOutlined />,
                 label: 'nav 2',
+                path: '/queue/a',
+                key: '/queue/a',
+                element: <Queue/>,
+                icon: '',
             },
             {
-                key: '3',
-                // icon: <UploadOutlined />,
                 label: 'nav 3',
+                path: '/queue/b',
+                key: '/queue/b',
+                icon: '',
             },
         ]
     },
     {
-        key: '2',
-        icon: <VideoCameraOutlined />,
-        label: 'nav 2',
+        label: '动态规划',
+        path: '/dynamic',
+        key: '/dynamic',
+        element: <Dynamic/>,
+        icon: '',
     },
     {
-        key: '3',
-        icon: <UploadOutlined />,
-        label: 'nav 3',
+        label: '贪心算法',
+        path: '/greedy',
+        key: '/greedy',
+        element: <Greedy/>,
+        icon: '',
     },
 ]
-
-
-
-export default function index() {
-    const [collapsed, setCollapsed] = useState(false);
-    return (
-        <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed}>
-                <div className="logo" >Algorithm</div>
-                <Menu
-                    theme="dark"
-                    mode="inline"
-                    defaultSelectedKeys={['1']}
-                    items={menuList}
-                />
-            </Sider>
-            <Layout className="site-layout">
-                <Header
-                    className="site-layout-background"
-                >
-                    {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                        className: 'trigger',
-                        onClick: () => setCollapsed(!collapsed),
-                    })}
-                </Header>
-                <Content
-                    className="site-layout-background"
-                    style={{
-                        margin: '24px 16px',
-                        padding: 24,
-                        minHeight: 280,
-                    }}
-                >
-                    
-                </Content>
-            </Layout>
-        </Layout>
-    )
-
-
-}
+export default menuList
