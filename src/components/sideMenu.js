@@ -10,7 +10,6 @@ const { Sider } = Layout;
     let location = useLocation();
     const selectKeys = [location.pathname];
     const openKeys = ["/" + location.pathname.split("/")[1]]
-    console.log(openKeys);
     return (
         <Sider trigger={null} collapsible collapsed={props.collapsed}>
             <Menu

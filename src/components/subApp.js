@@ -12,6 +12,7 @@ import {
 import { Layout } from 'antd';
 import React, { useState } from 'react';
 import { SideMenu } from 'components'
+import { HashRouter, Route, Routes } from 'react-router-dom' //HashRouter|# BrowserRouter|æ— #
 import { RoutList } from 'components'
 import Footer from '../plugins/footer'
 import Top from '../plugins/header'
@@ -41,7 +42,7 @@ export default function SubApp() {
                             minHeight: 280,
                         }}
                     >
-                        <RoutList/> 
+                        <RoutList />
                     </Content>
                 </Layout>
             </Layout>
