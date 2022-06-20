@@ -3,7 +3,7 @@
  * @Author: wanghexing
  * @Date: 2022-06-17 15:42:51
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-20 17:41:22
+ * @LastEditTime: 2022-06-20 17:44:34
  */
 import React from 'react'
 import { OmsSyntaxHighlight } from 'components'
@@ -102,8 +102,11 @@ console.log(doorWall([[-1]]));
     return (
         <div>
             <ReactMarkdown children={s} />
+            {/* 例子 */}
             <OmsSyntaxHighlight children={exam1} />
+            {/* 思路 */}
             <ReactMarkdown children={mind} />
+            {/* 代码实现 */}
             <OmsSyntaxHighlight children={doorAndWall} />
         </div>
     )
