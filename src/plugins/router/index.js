@@ -3,10 +3,10 @@
  * @Author: wanghexing
  * @Date: 2022-06-15 16:02:38
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-17 17:40:20
+ * @LastEditTime: 2022-06-20 15:15:14
  */
 import React from 'react'
-import Queue from 'src/app/queue/a'
+import Queue from 'src/app/queue/bfs'
 import Home from 'src/app/home/home'
 import Dynamic from 'src/app/dynamic'
 import Greedy from 'src/app/greedy'
@@ -30,9 +30,9 @@ const menuList = [
         icon: '',
         children: [
             {
-                label: 'nav 2',
-                path: '/queue/a',
-                key: '/queue/a',
+                label: 'BFS',
+                path: '/queue/bfs',
+                key: '/queue/bfs',
                 element: <Queue/>,
                 icon: '',
             },
