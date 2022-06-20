@@ -3,15 +3,15 @@
  * @Author: wanghexing
  * @Date: 2022-06-17 15:42:51
  * @LastEditors: wanghexing
- * @LastEditTime: 2022-06-20 17:34:14
+ * @LastEditTime: 2022-06-20 17:41:22
  */
 import React from 'react'
 import { OmsSyntaxHighlight } from 'components'
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
 export default function BFS() {
-    let s = '## 队列和广度优先搜索BFS\n' +'**遍历或找出最短路径,发生在树或图中**\n\n' +
-        '## 1.题目描述: 墙与门\n\n' +'给定一个 m × n 的二维网格，网格中有以下三种可能的初始化值：\n\n' +
+    let s = '## 队列和广度优先搜索BFS\n' + '**遍历或找出最短路径,发生在树或图中**\n\n' +
+        '## 1.题目描述: 墙与门\n\n' + '给定一个 m × n 的二维网格，网格中有以下三种可能的初始化值：\n\n' +
         '-1 表示墙或是障碍物,0 表示一扇门,INF 无限表示一个空的房间\n\n' +
         '然后，我们用 2^31 - 1 = 2147483647 代表 INF。你可以认为通往门的距离总是小于 2147483647 的。你要给每个空房间位上填上该房间到 最近门的距离，如果无法到达门，则填 INF 即可\n\n' +
         '示例1'
@@ -50,11 +50,25 @@ INF  -1 INF  -1
   2   2   1  -1
   1  -1   2  -1
   0  -1   3   4
+
+输入：
+[[0]]
+输出：
+[[0]]
+
+输入：
+[[-1]]
+输出：
+[[-1]]
+
+输入：
+[[2147483647]]
+输出：
+[[2147483647]]
 `
-    let mind = '## 2.解题思路\n\n'+'先把所有门(0)入队列,只要队列不为空就广度优先搜索 搜索到INF入列 步数+1'
+    let mind = '## 2.解题思路\n\n' + '先把所有门(0)入队列,只要队列不为空就广度优先搜索 搜索到INF入列 步数+1'
 
     let doorAndWall = `const doorWall = (rooms) => {
-    if (rooms == [] || rooms[0] == []) return [0]
     let inf = 2147483647 //无限门
     let r = rooms.length, c = rooms[0].length //行列
     let directions = [[1, 0], [0, 1], [-1, 0], [0, -1]] //方向
@@ -83,6 +97,7 @@ INF  -1 INF  -1
 }
 //测试
 console.log(doorWall([[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]]));
+console.log(doorWall([[-1]]));
 `
     return (
         <div>
