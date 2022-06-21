@@ -27403,6 +27403,9 @@ div.ant-typography-edit-content.ant-typography-rtl {
   padding: 0;
   margin: 0;
 }
+h1 {
+  font-size: 2em;
+}
 .header {
   display: flex;
   align-items: center;
@@ -27441,6 +27444,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 .ant-menu {
   font-size: 16px !important;
 }
+/*topic*/
 
 /*!********************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./node_modules/antd/dist/antd.css ***!
